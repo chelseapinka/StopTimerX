@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C0C0C0"
+    android:columnCount="4"
+    android:fadingEdge="horizontal"
+    android:fitsSystemWindows="false"
+    android:focusableInTouchMode="false"
+    android:orientation="horizontal"
+    android:visibility="visible"
+    tools:context=".MainActivity" >
+    
+    <Button
+        android:id="@+id/stopButton"
+        style="@style/ButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn_blue"
+        android:onClick="clickHandler"
+        android:text="StopTimer" />
+
+    <TextView
+        android:id="@+id/labelView"
+        android:layout_width="285dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/stopButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/NiceButtonDisabledEndColor"
+        android:gravity="center_horizontal"
+        android:shadowColor="#000000"
+        android:text="Enter the code and press the button."
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
+  
+    <TextView
+        android:id="@+id/timeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="15 secs left"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:textSize="43sp"
+        android:typeface="monospace" />
+    
+   <NumberPicker
+        android:id="@+id/np1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/stopButton"
+        android:layout_alignTop="@+id/np2"
+        android:background="#C0C0C0"
+        android:width="100dip" />
+       
+    <NumberPicker
+        android:id="@+id/np2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/np3"
+        android:layout_toRightOf="@+id/np1"
+        android:background="#C0C0C0"
+        android:width="100dip" />
+
+    <NumberPicker
+        android:id="@+id/np3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/np4"
+        android:layout_toRightOf="@+id/np2"
+        android:background="#C0C0C0"
+        android:width="100dip" />
+
+   <NumberPicker
+        android:id="@+id/np4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/timeView"
+        android:layout_centerVertical="true"
+        android:background="#C0C0C0"
+        android:width="100dip" />
+ 
+
+</RelativeLayout>
